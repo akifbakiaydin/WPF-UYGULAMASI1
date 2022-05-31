@@ -1,0 +1,38 @@
+﻿<Window x:Class="deneme_10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:deneme_10"
+        mc:Ignorable="d"
+        Title="Numara Kayıt Programı" Height="400" Width="340" Loaded="lst_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Canvas>
+        <ListView HorizontalAlignment="Left"
+		  Height="188" VerticalAlignment="Center" Width="300"
+		  Name="lst"  Canvas.Left="10" Loaded="lst_Loaded" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ADI"
+				    DisplayMemberBinding="{Binding ADI}"
+				    Width="96"/>
+                    <GridViewColumn Header="SOYADI"
+				    DisplayMemberBinding="{Binding SOYADI}"
+				    Width="96"/>
+                    <GridViewColumn Header="NUMARASI"
+				    DisplayMemberBinding="{Binding NUMARASI}"
+				    Width="96"/>
+                </GridView>
+            </ListView.View>
+            <TextBox Width="127"/>
+        </ListView>
+        <Button Content="Ekle" Height="29" Width="100" Canvas.Left="201" Canvas.Top="218" Click="Button_Click" RenderTransformOrigin="-0.203,0.677" HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
+        <Button Content="Sil" Height="29" Width="100" Canvas.Left="201" Canvas.Top="322" Click="Button_Click_1" RenderTransformOrigin="0.561,1.332" HorizontalAlignment="Left" VerticalAlignment="Center"></Button>
+        <TextBox x:Name="txt1" Width="127" Canvas.Left="22" Canvas.Top="224" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBox>
+        <TextBox x:Name="txt2"  Width="127" Canvas.Left="22" Canvas.Top="328" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBox>
+        <TextBox x:Name="txt3" Width="127" Canvas.Left="22" Canvas.Top="274" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBox>
+        <Label Content="ADI" Canvas.Left="22" Canvas.Top="193"/>
+        <Label Content="SOYADI" Canvas.Left="22" Canvas.Top="243"/>
+        <Label Content="NUMARASI" Canvas.Left="22" Canvas.Top="297"/>
+        <Button Content="Düzenle" Height="29" Width="100" Canvas.Left="201" Canvas.Top="268" Click="Button_Click_2" RenderTransformOrigin="0.561,1.332" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+    </Canvas>
+</Window>
